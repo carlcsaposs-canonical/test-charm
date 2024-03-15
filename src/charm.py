@@ -35,4 +35,4 @@ class FooCharm(ops.CharmBase):
         logger.warning(f"{list(self.framework._storage.notices())=}")
 
 if __name__ == "__main__":  # pragma: nocover
-    ops.main(FooCharm)  # type: ignore
+    ops.main(FooCharm, use_juju_for_storage=True)  # type: ignore
