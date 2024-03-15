@@ -15,7 +15,6 @@ https://juju.is/docs/sdk/create-a-minimal-kubernetes-charm
 import logging
 
 import ops
-import foo
 
 logger = logging.getLogger(__name__)
 
@@ -27,7 +26,6 @@ class FooCharm(ops.CharmBase):
         super().__init__(*args)
         self.framework.observe(self.on.install, self._on_install)
         self.framework.observe(self.on.update_status, self._on_update_status)
-        self.goo = foo.Foo(self)
 
     def _on_install(self, event: ops.InstallEvent):
         event.defer()
